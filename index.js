@@ -24,7 +24,7 @@ const userController = require('./controllers/userController')
 // middleware to parse JSON in request body
 app.use(express.json())
 // Use the userRoutes
-app.use('/user', userRoutes);
+app.use('/user', userRoutes)
 
 //define routes
 // The server file would have "/user" as it's root route for all user routes.
@@ -40,9 +40,9 @@ app.get('/user', (req, res) => {
 // const userData = user.find(u => u.username === username && u.password === password)
 // if (userData) {
 //     console.log(userData)
-//     res.status(200).json({ message: "Login successful" });
+//     res.status(200).json({ message: "Login successful" })
 // } else {
-//     res.status(401).json({ message: "Login failed" });
+//     res.status(401).json({ message: "Login failed" })
 // }
 // })
 

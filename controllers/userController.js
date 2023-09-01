@@ -16,13 +16,13 @@ const users = [
 ];
 
 function login(req, res) {
-    const { username, password } = req.body;
-    const user = users.find(u => u.username === username && u.password === password);
+    const { username, password } = req.body
+    const user = users.find(u => u.username === username && u.password === password)
     
     if (user) {
-        res.status(200).json({ message: "Login successful" });
+        res.status(200).json({ message: "Login successful" })
     } else {
-        res.status(401).json({ message: "Login failed" });
+        res.status(401).json({ message: "Login failed" })
     }
 }
 
@@ -30,7 +30,7 @@ function register(req, res) {
     const { username, email, password, name } = req.body;
 
     if (!username || !email || !password || !name) {
-        return res.status(400).json({ message: "All fields are required for registration" });
+        return res.status(400).json({ message: "All fields are required for registration" })
     }
 
     const newUser = {
@@ -41,8 +41,8 @@ function register(req, res) {
         name: name
     };
 
-    users.push(newUser);
-    res.status(201).json({ message: "User registered successfully", user: newUser });
+    users.push(newUser)
+    res.status(201).json({ message: "User registered successfully", user: newUser })
 }
 
 module.exports = {
