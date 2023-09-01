@@ -1,5 +1,8 @@
+const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/userController');
 
-// The user routes would have the following endpoints:
+router.post('/login', userController.login);
+router.post('/register', userController.register);
 
-// POST /login
-// POST /register
+module.exports = router;

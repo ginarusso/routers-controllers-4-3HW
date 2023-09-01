@@ -46,6 +46,7 @@ function register(req, res) {
 }
 
 module.exports = {
+    users,
     login,
     register
-};
+}
